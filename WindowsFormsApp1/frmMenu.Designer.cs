@@ -157,6 +157,7 @@
             this.button4.Text = "Borrar";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmMenu_MouseClick);
             // 
             // button3
@@ -179,6 +180,7 @@
             this.button3.Text = "Editar";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmMenu_MouseClick);
             // 
             // button2

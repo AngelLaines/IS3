@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsertar));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@ namespace WindowsFormsApp1
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -103,6 +105,7 @@ namespace WindowsFormsApp1
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "Minimizar";
+            this.toolTip1.SetToolTip(this.pictureBox3, "Minimizar");
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
             // 
@@ -117,7 +120,9 @@ namespace WindowsFormsApp1
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "Cerrar";
+            this.toolTip1.SetToolTip(this.pictureBox2, "Cerrar");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
             // 
             // panel1
             // 
@@ -212,6 +217,7 @@ namespace WindowsFormsApp1
             this.button4.Text = "Borrar";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
             // 
             // button3
@@ -234,6 +240,7 @@ namespace WindowsFormsApp1
             this.button3.Text = "Editar";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
             // 
             // button2
@@ -429,5 +436,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

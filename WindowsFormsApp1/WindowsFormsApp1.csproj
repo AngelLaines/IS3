@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBorrar.resx">
+      <DependentUpon>frmBorrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditar.resx">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInsertar.resx">
       <DependentUpon>frmInsertar.cs</DependentUpon>
     </EmbeddedResource>

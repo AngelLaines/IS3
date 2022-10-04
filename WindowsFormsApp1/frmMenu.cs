@@ -59,5 +59,20 @@ namespace WindowsFormsApp1
             ins.Visible=true;
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmEditar edit = new frmEditar();
+            edit.Visible = true;
+            this.Hide();
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmBorrar borrar = new frmBorrar();
+            borrar.Visible = true;
+            this.Hide();
+        }
     }
 }
