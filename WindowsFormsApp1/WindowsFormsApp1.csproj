@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBorrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBorrar.Designer.cs">
+      <DependentUpon>frmBorrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditar.Designer.cs">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInsertar.cs">
       <SubType>Form</SubType>
     </Compile>
