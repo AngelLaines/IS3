@@ -169,24 +169,9 @@
         Kt8Yaj1UKX2lZkGyLnlax1AR8KR3cDcNyNI66pwFdf7D4XCj8RenDYGtbC8y5gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAArxJREFUWEftmD1oFFEUhTcRFAsNWKhomqQNRlnWQgXtJJ2QbiGVYCdYamohiqiF
-        hVpJOjFVCgubpE4bWxsNrD/NGkSMJrr6ndmzYUfzZmZnJ6PgfnCZN+edc+/bJfuXyoABXbRarUnqquuk
-        5b8Hh9hPPf35G9K0Z1v5cIb59lGiw/xQ+VbM21YuDB7nIC2dgMszLiMqr6Vpb9z28mBuXQcQrEctSx+1
-        LL1uuTwYWqW+Ui85w5BlPZND0rxXtVwuDD7EQfb6dhtp2vPtfwaPXn/Ql6lbrG/3U+qhXqxH3D4fNLlA
-        faBRoainentMbxDUq2u93Spq1qBe91kNtxPr3G+/mjNDaE5prpvURct9o17UlnvPWc4OoSWHX1gqDPV0
-        7yVL2SEUPe1c71oqDPV074albBA4qKBgfcVyIviOYT/q20TU073FAcvpYK4pKFiftxwEz3HqM/WJOmw5
-        iHq6vfrXLKeDecY5BY9YDoLnjO3ilOUg6mmv+s9YTgfzTYealhLp9WCCzEeZNctSOvgXHFqxlEjOg63Y
-        v2ApHUKrDu34ZY/9Kns3uM66HrXt0YN50NG5lWfSsRjsRV8y2V+1lAzeYcwbDs1ajoH+XvtZwPvGsRjq
-        7f0vXIYth8E4poBgPW05BvoTaoP65tp0RBl9UnR0eR47FgN92hFlxiyHwTRlvwITlhPBl+dvbMJ+zZmy
-        HAbTNZv1efbHl8CdyHmwfdR3BTTTchhMD21+ZSkVvD0fTGiGApppKQymZZufW0oF72llBOsTllPRDGeW
-        LYXBtGbzPUupYN+D/z51h3X6K8xohmetWQqD6Z3NmQ+Wl66DvbUUBtOizU3qrOXCofc5qvOxtGg5DKYa
-        1f2+tLUb5fbqr/e9bN8wMF6ims7uGpqhWR6bDXL62VanrlOdz8SiSj31L4b+fsYN+PepVH4B4o3aIEZ/
-        /mcAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -209,9 +194,6 @@
         nK4yQEQP/nPwNnwAR6F2bX1pHIMqvhdegvWeVgKqqv4D1FbJqEWO4HsAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -233,4 +215,25 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAArxJREFUWEftmD1oFFEUhTcRFAsNWKhomqQNRlnWQgXtJJ2QbiGVYCdYamohiqiF
+        hVpJOjFVCgubpE4bWxsNrD/NGkSMJrr6ndmzYUfzZmZnJ6PgfnCZN+edc+/bJfuXyoABXbRarUnqquuk
+        5b8Hh9hPPf35G9K0Z1v5cIb59lGiw/xQ+VbM21YuDB7nIC2dgMszLiMqr6Vpb9z28mBuXQcQrEctSx+1
+        LL1uuTwYWqW+Ui85w5BlPZND0rxXtVwuDD7EQfb6dhtp2vPtfwaPXn/Ql6lbrG/3U+qhXqxH3D4fNLlA
+        faBRoainentMbxDUq2u93Spq1qBe91kNtxPr3G+/mjNDaE5prpvURct9o17UlnvPWc4OoSWHX1gqDPV0
+        7yVL2SEUPe1c71oqDPV074albBA4qKBgfcVyIviOYT/q20TU073FAcvpYK4pKFiftxwEz3HqM/WJOmw5
+        iHq6vfrXLKeDecY5BY9YDoLnjO3ilOUg6mmv+s9YTgfzTYealhLp9WCCzEeZNctSOvgXHFqxlEjOg63Y
+        v2ApHUKrDu34ZY/9Kns3uM66HrXt0YN50NG5lWfSsRjsRV8y2V+1lAzeYcwbDs1ajoH+XvtZwPvGsRjq
+        7f0vXIYth8E4poBgPW05BvoTaoP65tp0RBl9UnR0eR47FgN92hFlxiyHwTRlvwITlhPBl+dvbMJ+zZmy
+        HAbTNZv1efbHl8CdyHmwfdR3BTTTchhMD21+ZSkVvD0fTGiGApppKQymZZufW0oF72llBOsTllPRDGeW
+        LYXBtGbzPUupYN+D/z51h3X6K8xohmetWQqD6Z3NmQ+Wl66DvbUUBtOizU3qrOXCofc5qvOxtGg5DKYa
+        1f2+tLUb5fbqr/e9bN8wMF6ims7uGpqhWR6bDXL62VanrlOdz8SiSj31L4b+fsYN+PepVH4B4o3aIEZ/
+        /mcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
