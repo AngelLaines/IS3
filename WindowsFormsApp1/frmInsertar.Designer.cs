@@ -399,9 +399,11 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInsertar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInsertar";
+            this.Load += new System.EventHandler(this.frmInsertar_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

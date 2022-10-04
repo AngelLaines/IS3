@@ -64,5 +64,10 @@ namespace WindowsFormsApp1
             borrar.Visible = true;
             this.Close();
         }
+
+        private void frmInsertar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
