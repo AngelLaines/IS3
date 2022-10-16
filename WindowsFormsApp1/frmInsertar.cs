@@ -82,49 +82,68 @@ namespace RoyLavadoras
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Usted esta a punto de añadir un articulo vendido con los siguientes datos:\n" +
+            if (txtNombre.Text=="" ||
+                txtAP.Text == "" ||
+                txtAM.Text == "" ||
+                txtCiudad.Text == "" ||
+                txtDomicilio.Text == "" ||
+                txtTelefono.Text == "" ||
+                txtMarca.Text == "" ||
+                txtElectro.Text == "" ||
+                txtGarantia.Text == "" ||
+                txtImporte.Text == "") {
+                MessageBox.Show("Faltan datos por escribir!","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            } else
+            {
+                DialogResult dialogResult = MessageBox.Show("Usted esta a punto de añadir un articulo vendido con los siguientes datos:\n" +
                 "Nombre del cliente: " + txtNombre.Text + " " + txtAP.Text + " " + txtAM.Text + "\n\n" +
                 "Datos del domicilio del cliente: \n" +
                 "  Ciudad: " + txtCiudad.Text + "\n" +
                 "  Domicilio: " + txtDomicilio.Text + "\n" +
-                "  Numero: " + txtTelefono.Text + "\n\n"+
+                "  Numero: " + txtTelefono.Text + "\n\n" +
                 "Electrodomestico: \n" +
-                "  Garantia: " + txtGarantia.Text +"\n"+
-                "  Importe: "+txtImporte.Text+"\n\n" +
+                "  Nombre: " + txtElectro.Text + "\n" +
+                "  Marca: " + txtMarca.Text + "\n" +
+                "  Garantia: " + txtGarantia.Text + "\n" +
+                "  Importe: " + txtImporte.Text + "\n\n" +
                 "¿Desea añadir los datos de la venta?", "Advertencia", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-            DateTime date = DateTime.Now;
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
-            string fecha = date.ToString("yyyy-MM-dd");
-            string sql1 = @"insert into clientes(idCliente,nombre,apellidoP,apellidoM) values("+id.ToString()+",'"+txtNombre.Text+"','"+txtAP.Text+"','"+txtAM.Text+"')";
-            string sql2 = @"insert into direccion(idDireccion,ciudad,direccion,numero) values("+id.ToString()+",'"+txtCiudad.Text+"','"+txtDomicilio.Text+"',"+txtTelefono.Text +")";
-            string sql3 = @"insert into electrodomesticos(idElectrodomestico,nombre, marca) values("+id.ToString()+",'"+txtElectro.Text+"','"+txtMarca.Text+"')";
-            string sql4 = @"insert into ventas(idVenta,precio,garantia,fecha) values("+id.ToString()+",'"+ txtImporte.Text + "','" + txtGarantia.Text + "','"+fecha+"')";
-            string sql5 = @"insert into clientes_direccion values("+id.ToString()+","+id.ToString()+")";
-            string sql6 = @"insert into clientes_electrodomesticos values(" + id.ToString() + "," + id.ToString() + ")";
-            string sql7 = @"insert into clientes_ventas values(" + id.ToString() + "," + id.ToString() + ")";
-            try {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(sql1, conn);
-                cmd.ExecuteNonQuery();
-                cmd = new MySqlCommand(sql2,conn);
-                cmd.ExecuteNonQuery();
-                cmd = new MySqlCommand(sql3, conn);
-                cmd.ExecuteNonQuery();
-                cmd = new MySqlCommand(sql4, conn);
-                cmd.ExecuteNonQuery();
-                cmd = new MySqlCommand(sql5, conn);
-                cmd.ExecuteNonQuery();
-                cmd = new MySqlCommand(sql6, conn);
-                cmd.ExecuteNonQuery();
-                cmd = new MySqlCommand(sql7, conn);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Venta registrada con exito!","Venta");
-                conn.Close();
-                getId();
-            } catch (MySqlException ex) { MessageBox.Show(ex.ToString()); }
+                if (dialogResult == DialogResult.Yes)
+                {
+                    DateTime date = DateTime.Now;
+                    MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
+                    string fecha = date.ToString("yyyy-MM-dd");
+                    string sql1 = @"insert into clientes(idCliente,nombre,apellidoP,apellidoM) values(" + id.ToString() + ",'" + txtNombre.Text + "','" + txtAP.Text + "','" + txtAM.Text + "')";
+                    string sql2 = @"insert into direccion(idDireccion,ciudad,direccion,numero) values(" + id.ToString() + ",'" + txtCiudad.Text + "','" + txtDomicilio.Text + "'," + txtTelefono.Text + ")";
+                    string sql3 = @"insert into electrodomesticos(idElectrodomestico,nombre, marca) values(" + id.ToString() + ",'" + txtElectro.Text + "','" + txtMarca.Text + "')";
+                    string sql4 = @"insert into ventas(idVenta,precio,garantia,fecha) values(" + id.ToString() + ",'" + txtImporte.Text + "','" + txtGarantia.Text + "','" + fecha + "')";
+                    string sql5 = @"insert into clientes_direccion values(" + id.ToString() + "," + id.ToString() + ")";
+                    string sql6 = @"insert into clientes_electrodomesticos values(" + id.ToString() + "," + id.ToString() + ")";
+                    string sql7 = @"insert into clientes_ventas values(" + id.ToString() + "," + id.ToString() + ")";
+                    try
+                    {
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand(sql1, conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sql2, conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sql3, conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sql4, conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sql5, conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sql6, conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sql7, conn);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Venta registrada con exito!", "Venta");
+                        conn.Close();
+                        getId();
+                    }
+                    catch (MySqlException ex) { MessageBox.Show(ex.ToString()); }
+                }
             }
+            
         }
 
         private void frmInsertar_Load(object sender, EventArgs e)
@@ -231,6 +250,24 @@ namespace RoyLavadoras
             frmBuscar buscar = new frmBuscar("Electro");
             this.Hide();
             buscar.Show();
+        }
+
+        private void txtImporte_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

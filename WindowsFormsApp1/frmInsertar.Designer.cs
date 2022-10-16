@@ -599,6 +599,7 @@ namespace RoyLavadoras
             this.txtTelefono.Size = new System.Drawing.Size(189, 23);
             this.txtTelefono.TabIndex = 18;
             this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // panel8
             // 
@@ -862,6 +863,7 @@ namespace RoyLavadoras
             this.txtImporte.Size = new System.Drawing.Size(189, 23);
             this.txtImporte.TabIndex = 38;
             this.txtImporte.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtImporte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtImporte_KeyPress);
             // 
             // label14
             // 
