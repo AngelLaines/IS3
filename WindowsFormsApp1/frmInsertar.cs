@@ -83,10 +83,11 @@ namespace RoyLavadoras
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Usted esta a punto de añadir un articulo vendido con los siguientes datos:\n" +
-                "Nombre del cliente: " + txtNombre.Text+" "+txtAP.Text + " " +txtAM.Text +"\n\n"+
+                "Nombre del cliente: " + txtNombre.Text + " " + txtAP.Text + " " + txtAM.Text + "\n\n" +
                 "Datos del domicilio del cliente: \n" +
                 "  Ciudad: " + txtCiudad.Text + "\n" +
-                "  Domicilio: " + txtDomicilio.Text +"\n\n" +
+                "  Domicilio: " + txtDomicilio.Text + "\n" +
+                "  Numero: " + txtTelefono.Text + "\n\n"+
                 "Electrodomestico: \n" +
                 "  Garantia: " + txtGarantia.Text +"\n"+
                 "  Importe: "+txtImporte.Text+"\n\n" +
@@ -97,7 +98,7 @@ namespace RoyLavadoras
             MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
             string fecha = date.ToString("yyyy-MM-dd");
             string sql1 = @"insert into clientes(idCliente,nombre,apellidoP,apellidoM) values("+id.ToString()+",'"+txtNombre.Text+"','"+txtAP.Text+"','"+txtAM.Text+"')";
-            string sql2 = @"insert into direccion(idDireccion,ciudad,direccion) values("+id.ToString()+",'"+txtCiudad.Text+"','"+txtDomicilio.Text+"')";
+            string sql2 = @"insert into direccion(idDireccion,ciudad,direccion,numero) values("+id.ToString()+",'"+txtCiudad.Text+"','"+txtDomicilio.Text+"',"+txtTelefono.Text +")";
             string sql3 = @"insert into electrodomesticos(idElectrodomestico,nombre, marca) values("+id.ToString()+",'"+txtElectro.Text+"','"+txtMarca.Text+"')";
             string sql4 = @"insert into ventas(idVenta,precio,garantia,fecha) values("+id.ToString()+",'"+ txtImporte.Text + "','" + txtGarantia.Text + "','"+fecha+"')";
             string sql5 = @"insert into clientes_direccion values("+id.ToString()+","+id.ToString()+")";
@@ -195,6 +196,41 @@ namespace RoyLavadoras
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Nombre");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Fecha");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Numero");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Domicilio");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Electro");
+            this.Hide();
+            buscar.Show();
         }
     }
 }

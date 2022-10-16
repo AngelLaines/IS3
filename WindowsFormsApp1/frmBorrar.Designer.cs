@@ -284,6 +284,7 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
             // panel5
@@ -320,6 +321,7 @@
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             this.button10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
             // button8
@@ -342,6 +344,7 @@
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
             // button9
@@ -364,6 +367,7 @@
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             this.button9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
             // button6
@@ -386,6 +390,7 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
             // frmBorrar

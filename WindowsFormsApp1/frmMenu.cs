@@ -87,5 +87,33 @@ namespace RoyLavadoras
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Fecha");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Numero");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Domicilio");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Electro");
+            this.Hide();
+            buscar.Show();
+        }
     }
 }

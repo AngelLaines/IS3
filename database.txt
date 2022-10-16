@@ -33,8 +33,7 @@ create table if not exists direccion(
 create table if not exists electrodomesticos(
 	idElectrodomestico int auto_increment primary key,
     nombre varchar(500) not null,
-    marca varchar(500) not null,
-    garantia varchar(200) not null
+    marca varchar(500) not null
 );
 create table if not exists ventas(
 	idVenta int auto_increment primary key,
