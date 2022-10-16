@@ -20,25 +20,26 @@ drop table if exists electrodomesticos;
 drop table if exists direccion;
 drop table if exists clientes;
 create table if not exists clientes(
-	idCliente int auto_increment primary key,
+	idCliente int primary key,
     nombre varchar(50) not null,
     apellidoP varchar(50) not null,
     apellidoM varchar(50) not null
 ); 
 create table if not exists direccion(
-	idDireccion int auto_increment primary key,
+	idDireccion int primary key,
     ciudad varchar(200) not null,
     direccion varchar(200) not null
 );
 create table if not exists electrodomesticos(
-	idElectrodomestico int auto_increment primary key,
+	idElectrodomestico int primary key,
     nombre varchar(500) not null,
     marca varchar(500) not null
 );
 create table if not exists ventas(
-	idVenta int auto_increment primary key,
+	idVenta int primary key,
     precio double not null,
-    garantia varchar(500) not null
+    garantia varchar(500) not null,
+    fecha date not null
 );
 create table if not exists clientes_direccion(
 	idCliente int not null,
