@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace RoyLavadoras
 {
     public partial class frmEditar : Form
     {
@@ -63,6 +63,11 @@ namespace WindowsFormsApp1
             frmBorrar borrar = new frmBorrar();
             borrar.Visible = true;
             this.Close();
+        }
+
+        private void frmEditar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace RoyLavadoras
 {
     public partial class frmBorrar : Form
     {
@@ -63,6 +63,11 @@ namespace WindowsFormsApp1
         private void frmBorrar_MouseClick(object sender, MouseEventArgs e)
         {
             panel5.Visible = false;
+        }
+
+        private void frmBorrar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

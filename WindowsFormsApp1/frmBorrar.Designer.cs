@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace RoyLavadoras
 {
     partial class frmBorrar
     {
@@ -403,6 +403,7 @@
             this.Name = "frmBorrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBorrar";
+            this.Load += new System.EventHandler(this.frmBorrar_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

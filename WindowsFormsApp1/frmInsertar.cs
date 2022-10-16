@@ -11,7 +11,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using RoyLavadoras;
 
-namespace WindowsFormsApp1
+namespace RoyLavadoras
 {
     public partial class frmInsertar : Form
     {
@@ -150,6 +150,51 @@ namespace WindowsFormsApp1
                 conn.Close();
             }
             catch (MySqlException xe) { MessageBox.Show(xe.ToString()); }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

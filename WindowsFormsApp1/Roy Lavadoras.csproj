@@ -56,6 +56,12 @@
     <Compile Include="frmBorrar.Designer.cs">
       <DependentUpon>frmBorrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscar.Designer.cs">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBorrar.resx">
       <DependentUpon>frmBorrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscar.resx">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditar.resx">
       <DependentUpon>frmEditar.cs</DependentUpon>

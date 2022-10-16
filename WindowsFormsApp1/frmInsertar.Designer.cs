@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApp1
+namespace RoyLavadoras
 {
     partial class frmInsertar
     {
@@ -37,6 +37,7 @@ namespace WindowsFormsApp1
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -95,7 +96,6 @@ namespace WindowsFormsApp1
             this.label14 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -195,6 +195,28 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(182, 554);
             this.panel1.TabIndex = 4;
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(142)))), ((int)(((byte)(228)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 15F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 489);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 65);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Guardar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
             // 
             // button5
             // 
@@ -455,6 +477,7 @@ namespace WindowsFormsApp1
             this.label4.Size = new System.Drawing.Size(79, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Nombre";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label5
             // 
@@ -465,6 +488,7 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(154, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "Apellido Paterno";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -475,6 +499,7 @@ namespace WindowsFormsApp1
             this.label6.Size = new System.Drawing.Size(158, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Apellido Materno";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -516,6 +541,7 @@ namespace WindowsFormsApp1
             this.txtNombre.Size = new System.Drawing.Size(189, 23);
             this.txtNombre.TabIndex = 13;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtAP
             // 
@@ -526,6 +552,7 @@ namespace WindowsFormsApp1
             this.txtAP.Size = new System.Drawing.Size(189, 23);
             this.txtAP.TabIndex = 14;
             this.txtAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAP.TextChanged += new System.EventHandler(this.txtAP_TextChanged);
             // 
             // txtAM
             // 
@@ -536,6 +563,7 @@ namespace WindowsFormsApp1
             this.txtAM.Size = new System.Drawing.Size(189, 23);
             this.txtAM.TabIndex = 15;
             this.txtAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAM.TextChanged += new System.EventHandler(this.txtAM_TextChanged);
             // 
             // txtCiudad
             // 
@@ -574,6 +602,7 @@ namespace WindowsFormsApp1
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(189, 30);
             this.panel8.TabIndex = 20;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // panel9
             // 
@@ -608,6 +637,7 @@ namespace WindowsFormsApp1
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(189, 30);
             this.panel12.TabIndex = 21;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
             // panel13
             // 
@@ -668,6 +698,7 @@ namespace WindowsFormsApp1
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(189, 30);
             this.panel6.TabIndex = 19;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // txtElectro
             // 
@@ -853,28 +884,6 @@ namespace WindowsFormsApp1
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(189, 3);
             this.panel27.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(142)))), ((int)(((byte)(228)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 15F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 489);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 65);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "Guardar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmInsertar_MouseClick);
             // 
             // frmInsertar
             // 

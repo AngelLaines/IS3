@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace RoyLavadoras
 {
     partial class frmEditar
     {
@@ -403,6 +403,7 @@
             this.Name = "frmEditar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditar";
+            this.Load += new System.EventHandler(this.frmEditar_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmEditar_MouseClick);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RoyLavadoras;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace RoyLavadoras
 {
     public partial class frmMenu : Form
     {
@@ -73,6 +74,18 @@ namespace WindowsFormsApp1
             frmBorrar borrar = new frmBorrar();
             borrar.Visible = true;
             this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmBuscar buscar = new frmBuscar("Nombre");
+            this.Hide();
+            buscar.Show();
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

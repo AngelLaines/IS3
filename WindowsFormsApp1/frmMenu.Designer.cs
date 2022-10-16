@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace RoyLavadoras
 {
     partial class frmMenu
     {
@@ -425,6 +425,7 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmMenu_MouseClick);
             // 
             // frmMenu
@@ -445,6 +446,7 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmMenu_MouseClick);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
