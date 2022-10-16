@@ -1,0 +1,63 @@
+Fecha
+Nombre
+Apellido Paterno
+Apellido Materno
+Ciudad
+Domicilio
+Tipo de electrodomestico
+Marca
+Garantia
+Atendio
+Importe
+
+create database roy_lavadoras;
+use database roy_lavadoras;
+drop table if exists clientes_ventas;
+drop table if exists clientes_electrodomesticos;
+drop table if exists clientes_direccion;
+drop table if exists ventas;
+drop table if exists electrodomesticos;
+drop table if exists direccion;
+drop table if exists clientes;
+create table if not exists clientes(
+	idCliente int auto_increment primary key,
+    nombre varchar(50) not null,
+    apellidoP varchar(50) not null,
+    apellidoM varchar(50) not null
+); 
+create table if not exists direccion(
+	idDireccion int auto_increment primary key,
+    ciudad varchar(200) not null,
+    direccion varchar(200) not null
+);
+create table if not exists electrodomesticos(
+	idElectrodomestico int auto_increment primary key,
+    nombre varchar(500) not null,
+    marca varchar(500) not null,
+    garantia varchar(200) not null
+);
+create table if not exists ventas(
+	idVenta int auto_increment primary key,
+    precio double not null,
+    garantia varchar(500) not null
+);
+create table if not exists clientes_direccion(
+	idCliente int not null,
+	idDireccion int not null,
+    foreign key (idCliente) references clientes(idcliente),
+    foreign key (idDireccion) references direccion(idDireccion)
+);
+create table if not exists clientes_electrodomesticos(
+	idCliente int not null,
+    idElectrodomestico int not null,
+    foreign key (idCliente) references clientes(idCliente),
+    foreign key (idElectrodomestico) references electrodomesticos(idElectrodomestico)
+);
+create table if not exists clientes_ventas(
+	idCliente int not null,
+    idVenta int not null,
+    foreign key (idCliente) references clientes(idCliente),
+    foreign key (idVenta) references ventas(idVenta)
+);
+
+select c.idcliente,e.idelectrodomestico,v.idVenta,d.iddireccion from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca="LG"
