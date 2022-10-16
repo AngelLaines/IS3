@@ -12,6 +12,7 @@ Importe
 
 create database roy_lavadoras;
 use database roy_lavadoras;
+use roy_lavadoras;
 drop table if exists clientes_ventas;
 drop table if exists clientes_electrodomesticos;
 drop table if exists clientes_direccion;
@@ -28,7 +29,8 @@ create table if not exists clientes(
 create table if not exists direccion(
 	idDireccion int primary key,
     ciudad varchar(200) not null,
-    direccion varchar(200) not null
+    direccion varchar(200) not null,
+    numero bigint not null
 );
 create table if not exists electrodomesticos(
 	idElectrodomestico int primary key,
@@ -59,5 +61,6 @@ create table if not exists clientes_ventas(
     foreign key (idCliente) references clientes(idCliente),
     foreign key (idVenta) references ventas(idVenta)
 );
+
 
 select c.idcliente,e.idelectrodomestico,v.idVenta,d.iddireccion from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca="LG"
