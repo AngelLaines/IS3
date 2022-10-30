@@ -16,8 +16,10 @@ namespace RoyLavadoras
     {
         private string buscar="";
         private String search;
+        Connection cn;
         public frmBuscar(String search)
         {
+            cn = new Connection();
             this.search = search;
             InitializeComponent();
         }
@@ -111,6 +113,8 @@ namespace RoyLavadoras
                 case "Nombre":
                     panel6.Visible = true;
                     buscar = "nombre";
+                    gridBuscar.Location = new Point(182, 161);
+                    gridBuscar.Height = 393;
                     break;
                 case "Fecha":
                     buscar = "fecha";
@@ -141,8 +145,8 @@ namespace RoyLavadoras
 
         private void button11_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
-            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where c.nombre='" + txtNombre.Text+"' and c.apellidop='"+txtAP.Text+"' and c.apellidom='"+txtAM.Text+"'";
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where c.nombre='" + txtNombre.Text+"'";
             try
             {
 
@@ -214,8 +218,8 @@ namespace RoyLavadoras
         private void button6_Click(object sender, EventArgs e)
         {
             string fecha =dateTimePicker1.Value.ToString("yyyy-MM-dd");
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
-            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where v.fecha='" + fecha +"'";
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where v.fecha='" + fecha +"'";
             try
             {
 
@@ -256,12 +260,12 @@ namespace RoyLavadoras
 
         private void button11_Click_1(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
+            MySqlConnection conn = new MySqlConnection(cn.conn());
             string numero = txtNumero.Text;
             if (numero =="") {
                 numero = "0";
             }
-            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where d.numero=" + numero;
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where d.numero=" + numero;
             try
             {
 
@@ -301,8 +305,8 @@ namespace RoyLavadoras
 
         private void button12_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
-            string sql = @"select c.idcliente as 'Id Cliente', c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where d.direccion='"+txtDireccion.Text+ "'";
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente', c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where d.direccion='" + txtDireccion.Text+ "'";
             try
             {
 
@@ -349,8 +353,7 @@ namespace RoyLavadoras
             panel8.Visible = false;
             buscar = "nombre";
             gridBuscar.DataSource = null;
-            gridBuscar.Location = new Point(182,251);
-            gridBuscar.Height = 303;
+           
         }
         private void porFecha()
         {
@@ -367,8 +370,7 @@ namespace RoyLavadoras
             panel8.Visible = true;
             buscar = "fecha";
             gridBuscar.DataSource = null;
-            gridBuscar.Location = new Point(182, 161);
-            gridBuscar.Height = 393;
+      
         }
         private void porNumero()
         {
@@ -385,8 +387,7 @@ namespace RoyLavadoras
             panel23.Visible = false;
             buscar = "numero";
             gridBuscar.DataSource = null;
-            gridBuscar.Location = new Point(182, 161);
-            gridBuscar.Height = 393;
+    
         }
         private void porDomi()
         {
@@ -403,8 +404,6 @@ namespace RoyLavadoras
             panel23.Visible = false;
             buscar = "domi";
             gridBuscar.DataSource = null;
-            gridBuscar.Location = new Point(182, 161);
-            gridBuscar.Height = 393;
         }
         private void porElectro()
         {
@@ -421,8 +420,6 @@ namespace RoyLavadoras
             panel23.Visible = true;
             buscar = "electro";
             gridBuscar.DataSource = null;
-            gridBuscar.Location = new Point(182, 161);
-            gridBuscar.Height = 393;
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -487,8 +484,8 @@ namespace RoyLavadoras
 
         private void button29_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
-            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + txtMarca.Text + "'";
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + txtMarca.Text + "'";
             try
             {
 

@@ -11,7 +11,6 @@ Atendio
 Importe
 
 create database roy_lavadoras;
-use database roy_lavadoras;
 use roy_lavadoras;
 drop table if exists clientes_ventas;
 drop table if exists clientes_electrodomesticos;
@@ -41,6 +40,7 @@ create table if not exists ventas(
 	idVenta int primary key,
     precio double not null,
     garantia varchar(500) not null,
+    atiende varchar(500) not null,
     fecha date not null
 );
 create table if not exists clientes_direccion(

@@ -16,9 +16,10 @@ namespace RoyLavadoras
     public partial class frmInsertar : Form
     {
         private int id = 0;
-
+        Connection cn;
         public frmInsertar()
         {
+            cn = new Connection();
             InitializeComponent();
         }
 
@@ -110,12 +111,12 @@ namespace RoyLavadoras
                 if (dialogResult == DialogResult.Yes)
                 {
                     DateTime date = DateTime.Now;
-                    MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
+                    MySqlConnection conn = new MySqlConnection(cn.conn());
                     string fecha = date.ToString("yyyy-MM-dd");
                     string sql1 = @"insert into clientes(idCliente,nombre,apellidoP,apellidoM) values(" + id.ToString() + ",'" + txtNombre.Text + "','" + txtAP.Text + "','" + txtAM.Text + "')";
                     string sql2 = @"insert into direccion(idDireccion,ciudad,direccion,numero) values(" + id.ToString() + ",'" + txtCiudad.Text + "','" + txtDomicilio.Text + "'," + txtTelefono.Text + ")";
                     string sql3 = @"insert into electrodomesticos(idElectrodomestico,nombre, marca) values(" + id.ToString() + ",'" + txtElectro.Text + "','" + txtMarca.Text + "')";
-                    string sql4 = @"insert into ventas(idVenta,precio,garantia,fecha) values(" + id.ToString() + ",'" + txtImporte.Text + "','" + txtGarantia.Text + "','" + fecha + "')";
+                    string sql4 = @"insert into ventas(idVenta,precio,garantia,atiende,fecha) values(" + id.ToString() + ",'" + txtImporte.Text + "','" + txtGarantia.Text +"','"+txtAtiende.Text+ "','" + fecha + "')";
                     string sql5 = @"insert into clientes_direccion values(" + id.ToString() + "," + id.ToString() + ")";
                     string sql6 = @"insert into clientes_electrodomesticos values(" + id.ToString() + "," + id.ToString() + ")";
                     string sql7 = @"insert into clientes_ventas values(" + id.ToString() + "," + id.ToString() + ")";
@@ -151,7 +152,7 @@ namespace RoyLavadoras
             getId();
         }
         private void getId() {
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
+            MySqlConnection conn = new MySqlConnection(cn.conn());
             string sql = @"select max(idCliente) as idCliente from clientes";
             try
             {
