@@ -96,6 +96,14 @@ namespace RoyLavadoras
             this.label14 = new System.Windows.Forms.Label();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -477,7 +485,7 @@ namespace RoyLavadoras
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 15F);
-            this.label4.Location = new System.Drawing.Point(203, 162);
+            this.label4.Location = new System.Drawing.Point(220, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 23);
             this.label4.TabIndex = 7;
@@ -488,7 +496,7 @@ namespace RoyLavadoras
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 15F);
-            this.label5.Location = new System.Drawing.Point(203, 214);
+            this.label5.Location = new System.Drawing.Point(220, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 23);
             this.label5.TabIndex = 8;
@@ -499,7 +507,7 @@ namespace RoyLavadoras
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 15F);
-            this.label6.Location = new System.Drawing.Point(203, 266);
+            this.label6.Location = new System.Drawing.Point(220, 266);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(158, 23);
             this.label6.TabIndex = 9;
@@ -510,7 +518,7 @@ namespace RoyLavadoras
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 15F);
-            this.label7.Location = new System.Drawing.Point(203, 373);
+            this.label7.Location = new System.Drawing.Point(220, 373);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 23);
             this.label7.TabIndex = 10;
@@ -520,7 +528,7 @@ namespace RoyLavadoras
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 15F);
-            this.label8.Location = new System.Drawing.Point(203, 425);
+            this.label8.Location = new System.Drawing.Point(220, 425);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 23);
             this.label8.TabIndex = 11;
@@ -530,7 +538,7 @@ namespace RoyLavadoras
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 15F);
-            this.label9.Location = new System.Drawing.Point(203, 477);
+            this.label9.Location = new System.Drawing.Point(220, 477);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 23);
             this.label9.TabIndex = 12;
@@ -541,7 +549,7 @@ namespace RoyLavadoras
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtNombre.Location = new System.Drawing.Point(363, 162);
+            this.txtNombre.Location = new System.Drawing.Point(380, 162);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(189, 23);
             this.txtNombre.TabIndex = 13;
@@ -552,7 +560,7 @@ namespace RoyLavadoras
             // 
             this.txtAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAP.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtAP.Location = new System.Drawing.Point(363, 214);
+            this.txtAP.Location = new System.Drawing.Point(380, 214);
             this.txtAP.Name = "txtAP";
             this.txtAP.Size = new System.Drawing.Size(189, 23);
             this.txtAP.TabIndex = 14;
@@ -563,7 +571,7 @@ namespace RoyLavadoras
             // 
             this.txtAM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAM.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtAM.Location = new System.Drawing.Point(363, 266);
+            this.txtAM.Location = new System.Drawing.Point(380, 266);
             this.txtAM.Name = "txtAM";
             this.txtAM.Size = new System.Drawing.Size(189, 23);
             this.txtAM.TabIndex = 15;
@@ -574,7 +582,7 @@ namespace RoyLavadoras
             // 
             this.txtCiudad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCiudad.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtCiudad.Location = new System.Drawing.Point(363, 373);
+            this.txtCiudad.Location = new System.Drawing.Point(380, 373);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(189, 23);
             this.txtCiudad.TabIndex = 16;
@@ -584,7 +592,7 @@ namespace RoyLavadoras
             // 
             this.txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDomicilio.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtDomicilio.Location = new System.Drawing.Point(363, 425);
+            this.txtDomicilio.Location = new System.Drawing.Point(380, 425);
             this.txtDomicilio.Name = "txtDomicilio";
             this.txtDomicilio.Size = new System.Drawing.Size(189, 23);
             this.txtDomicilio.TabIndex = 17;
@@ -594,7 +602,7 @@ namespace RoyLavadoras
             // 
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtTelefono.Location = new System.Drawing.Point(363, 477);
+            this.txtTelefono.Location = new System.Drawing.Point(380, 477);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(189, 23);
             this.txtTelefono.TabIndex = 18;
@@ -604,7 +612,7 @@ namespace RoyLavadoras
             // panel8
             // 
             this.panel8.Controls.Add(this.panel9);
-            this.panel8.Location = new System.Drawing.Point(363, 214);
+            this.panel8.Location = new System.Drawing.Point(380, 214);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(189, 30);
             this.panel8.TabIndex = 20;
@@ -622,7 +630,7 @@ namespace RoyLavadoras
             // panel10
             // 
             this.panel10.Controls.Add(this.panel11);
-            this.panel10.Location = new System.Drawing.Point(363, 373);
+            this.panel10.Location = new System.Drawing.Point(380, 373);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(189, 30);
             this.panel10.TabIndex = 22;
@@ -639,7 +647,7 @@ namespace RoyLavadoras
             // panel12
             // 
             this.panel12.Controls.Add(this.panel13);
-            this.panel12.Location = new System.Drawing.Point(363, 266);
+            this.panel12.Location = new System.Drawing.Point(380, 266);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(189, 30);
             this.panel12.TabIndex = 21;
@@ -657,7 +665,7 @@ namespace RoyLavadoras
             // panel14
             // 
             this.panel14.Controls.Add(this.panel15);
-            this.panel14.Location = new System.Drawing.Point(363, 477);
+            this.panel14.Location = new System.Drawing.Point(380, 477);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(189, 30);
             this.panel14.TabIndex = 24;
@@ -674,7 +682,7 @@ namespace RoyLavadoras
             // panel16
             // 
             this.panel16.Controls.Add(this.panel17);
-            this.panel16.Location = new System.Drawing.Point(363, 425);
+            this.panel16.Location = new System.Drawing.Point(380, 425);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(189, 30);
             this.panel16.TabIndex = 23;
@@ -700,7 +708,7 @@ namespace RoyLavadoras
             // panel6
             // 
             this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(363, 162);
+            this.panel6.Location = new System.Drawing.Point(380, 162);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(189, 30);
             this.panel6.TabIndex = 19;
@@ -710,7 +718,7 @@ namespace RoyLavadoras
             // 
             this.txtElectro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtElectro.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtElectro.Location = new System.Drawing.Point(792, 162);
+            this.txtElectro.Location = new System.Drawing.Point(806, 162);
             this.txtElectro.Name = "txtElectro";
             this.txtElectro.Size = new System.Drawing.Size(189, 23);
             this.txtElectro.TabIndex = 26;
@@ -720,16 +728,16 @@ namespace RoyLavadoras
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 15F);
-            this.label10.Location = new System.Drawing.Point(596, 162);
+            this.label10.Location = new System.Drawing.Point(643, 162);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(162, 23);
+            this.label10.Size = new System.Drawing.Size(79, 23);
             this.label10.TabIndex = 25;
-            this.label10.Text = "Electrodomestico";
+            this.label10.Text = "Nombre";
             // 
             // panel18
             // 
             this.panel18.Controls.Add(this.panel19);
-            this.panel18.Location = new System.Drawing.Point(792, 162);
+            this.panel18.Location = new System.Drawing.Point(806, 162);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(189, 30);
             this.panel18.TabIndex = 27;
@@ -747,7 +755,7 @@ namespace RoyLavadoras
             // 
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMarca.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtMarca.Location = new System.Drawing.Point(792, 214);
+            this.txtMarca.Location = new System.Drawing.Point(806, 214);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(189, 23);
             this.txtMarca.TabIndex = 29;
@@ -757,7 +765,7 @@ namespace RoyLavadoras
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 15F);
-            this.label11.Location = new System.Drawing.Point(596, 214);
+            this.label11.Location = new System.Drawing.Point(643, 214);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 23);
             this.label11.TabIndex = 28;
@@ -766,7 +774,7 @@ namespace RoyLavadoras
             // panel20
             // 
             this.panel20.Controls.Add(this.panel21);
-            this.panel20.Location = new System.Drawing.Point(792, 214);
+            this.panel20.Location = new System.Drawing.Point(806, 214);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(189, 30);
             this.panel20.TabIndex = 30;
@@ -784,7 +792,7 @@ namespace RoyLavadoras
             // 
             this.txtGarantia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGarantia.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtGarantia.Location = new System.Drawing.Point(792, 266);
+            this.txtGarantia.Location = new System.Drawing.Point(806, 266);
             this.txtGarantia.Name = "txtGarantia";
             this.txtGarantia.Size = new System.Drawing.Size(189, 23);
             this.txtGarantia.TabIndex = 32;
@@ -794,7 +802,7 @@ namespace RoyLavadoras
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 15F);
-            this.label12.Location = new System.Drawing.Point(596, 266);
+            this.label12.Location = new System.Drawing.Point(643, 266);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(88, 23);
             this.label12.TabIndex = 31;
@@ -803,7 +811,7 @@ namespace RoyLavadoras
             // panel22
             // 
             this.panel22.Controls.Add(this.panel23);
-            this.panel22.Location = new System.Drawing.Point(792, 266);
+            this.panel22.Location = new System.Drawing.Point(806, 266);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(189, 30);
             this.panel22.TabIndex = 33;
@@ -821,7 +829,7 @@ namespace RoyLavadoras
             // 
             this.txtAtiende.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAtiende.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtAtiende.Location = new System.Drawing.Point(792, 373);
+            this.txtAtiende.Location = new System.Drawing.Point(806, 373);
             this.txtAtiende.Name = "txtAtiende";
             this.txtAtiende.Size = new System.Drawing.Size(189, 23);
             this.txtAtiende.TabIndex = 35;
@@ -831,7 +839,7 @@ namespace RoyLavadoras
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 15F);
-            this.label13.Location = new System.Drawing.Point(596, 373);
+            this.label13.Location = new System.Drawing.Point(643, 373);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(76, 23);
             this.label13.TabIndex = 34;
@@ -840,7 +848,7 @@ namespace RoyLavadoras
             // panel24
             // 
             this.panel24.Controls.Add(this.panel25);
-            this.panel24.Location = new System.Drawing.Point(792, 373);
+            this.panel24.Location = new System.Drawing.Point(806, 373);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(189, 30);
             this.panel24.TabIndex = 36;
@@ -858,7 +866,7 @@ namespace RoyLavadoras
             // 
             this.txtImporte.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtImporte.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtImporte.Location = new System.Drawing.Point(792, 425);
+            this.txtImporte.Location = new System.Drawing.Point(806, 425);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(189, 23);
             this.txtImporte.TabIndex = 38;
@@ -869,7 +877,7 @@ namespace RoyLavadoras
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 15F);
-            this.label14.Location = new System.Drawing.Point(596, 425);
+            this.label14.Location = new System.Drawing.Point(643, 425);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 23);
             this.label14.TabIndex = 37;
@@ -878,7 +886,7 @@ namespace RoyLavadoras
             // panel26
             // 
             this.panel26.Controls.Add(this.panel27);
-            this.panel26.Location = new System.Drawing.Point(792, 425);
+            this.panel26.Location = new System.Drawing.Point(806, 425);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(189, 30);
             this.panel26.TabIndex = 39;
@@ -892,17 +900,91 @@ namespace RoyLavadoras
             this.panel27.Size = new System.Drawing.Size(189, 3);
             this.panel27.TabIndex = 0;
             // 
+            // panel28
+            // 
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel28.Location = new System.Drawing.Point(214, 344);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(393, 186);
+            this.panel28.TabIndex = 40;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 15F);
+            this.label15.Location = new System.Drawing.Point(362, 331);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 23);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "Direccion";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 15F);
+            this.label16.Location = new System.Drawing.Point(371, 119);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(70, 23);
+            this.label16.TabIndex = 43;
+            this.label16.Text = "Cliente";
+            // 
+            // panel29
+            // 
+            this.panel29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel29.Location = new System.Drawing.Point(214, 132);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(393, 186);
+            this.panel29.TabIndex = 42;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 15F);
+            this.label17.Location = new System.Drawing.Point(755, 119);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(162, 23);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Electrodomestico";
+            // 
+            // panel30
+            // 
+            this.panel30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel30.Location = new System.Drawing.Point(636, 132);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(393, 186);
+            this.panel30.TabIndex = 44;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 15F);
+            this.label18.Location = new System.Drawing.Point(802, 331);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(60, 23);
+            this.label18.TabIndex = 47;
+            this.label18.Text = "Venta";
+            // 
+            // panel31
+            // 
+            this.panel31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel31.Location = new System.Drawing.Point(636, 344);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(393, 186);
+            this.panel31.TabIndex = 46;
+            // 
             // frmInsertar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.txtImporte);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel26);
             this.Controls.Add(this.txtAtiende);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel24);
             this.Controls.Add(this.txtGarantia);
             this.Controls.Add(this.label12);
@@ -922,7 +1004,6 @@ namespace RoyLavadoras
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
@@ -934,6 +1015,13 @@ namespace RoyLavadoras
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel28);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.panel29);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.panel30);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.panel31);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInsertar";
@@ -1031,5 +1119,13 @@ namespace RoyLavadoras
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Panel panel31;
     }
 }

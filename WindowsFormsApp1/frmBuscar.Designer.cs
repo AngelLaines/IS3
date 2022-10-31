@@ -51,32 +51,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.gridBuscar = new System.Windows.Forms.DataGridView();
-            this.txtAM = new System.Windows.Forms.TextBox();
-            this.txtAP = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblAP = new System.Windows.Forms.Label();
-            this.lblAM = new System.Windows.Forms.Label();
-            this.panN3 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panN2 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panN1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnBuscarN = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button6 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
@@ -89,6 +81,7 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
@@ -108,7 +101,6 @@
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -117,8 +109,6 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridBuscar)).BeginInit();
-            this.panN3.SuspendLayout();
-            this.panN2.SuspendLayout();
             this.panN1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -484,34 +474,15 @@
             this.gridBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridBuscar.GridColor = System.Drawing.SystemColors.Control;
-            this.gridBuscar.Location = new System.Drawing.Point(182, 251);
+            this.gridBuscar.Location = new System.Drawing.Point(182, 161);
             this.gridBuscar.Name = "gridBuscar";
             this.gridBuscar.ReadOnly = true;
             this.gridBuscar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.gridBuscar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.gridBuscar.Size = new System.Drawing.Size(885, 303);
+            this.gridBuscar.RowTemplate.ReadOnly = true;
+            this.gridBuscar.Size = new System.Drawing.Size(885, 393);
             this.gridBuscar.TabIndex = 8;
             this.gridBuscar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBuscar_MouseClick);
-            // 
-            // txtAM
-            // 
-            this.txtAM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAM.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtAM.Location = new System.Drawing.Point(187, 119);
-            this.txtAM.Name = "txtAM";
-            this.txtAM.Size = new System.Drawing.Size(189, 23);
-            this.txtAM.TabIndex = 27;
-            this.txtAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtAP
-            // 
-            this.txtAP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAP.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtAP.Location = new System.Drawing.Point(187, 67);
-            this.txtAP.Name = "txtAP";
-            this.txtAP.Size = new System.Drawing.Size(189, 23);
-            this.txtAP.TabIndex = 26;
-            this.txtAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNombre
             // 
@@ -533,60 +504,6 @@
             this.lblNombre.Size = new System.Drawing.Size(79, 23);
             this.lblNombre.TabIndex = 22;
             this.lblNombre.Text = "Nombre";
-            // 
-            // lblAP
-            // 
-            this.lblAP.AutoSize = true;
-            this.lblAP.Font = new System.Drawing.Font("Arial", 15F);
-            this.lblAP.Location = new System.Drawing.Point(27, 67);
-            this.lblAP.Name = "lblAP";
-            this.lblAP.Size = new System.Drawing.Size(154, 23);
-            this.lblAP.TabIndex = 23;
-            this.lblAP.Text = "Apellido Paterno";
-            // 
-            // lblAM
-            // 
-            this.lblAM.AutoSize = true;
-            this.lblAM.Font = new System.Drawing.Font("Arial", 15F);
-            this.lblAM.Location = new System.Drawing.Point(27, 119);
-            this.lblAM.Name = "lblAM";
-            this.lblAM.Size = new System.Drawing.Size(158, 23);
-            this.lblAM.TabIndex = 24;
-            this.lblAM.Text = "Apellido Materno";
-            // 
-            // panN3
-            // 
-            this.panN3.Controls.Add(this.panel13);
-            this.panN3.Location = new System.Drawing.Point(187, 119);
-            this.panN3.Name = "panN3";
-            this.panN3.Size = new System.Drawing.Size(189, 30);
-            this.panN3.TabIndex = 30;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(131)))), ((int)(((byte)(139)))));
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 27);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(189, 3);
-            this.panel13.TabIndex = 0;
-            // 
-            // panN2
-            // 
-            this.panN2.Controls.Add(this.panel9);
-            this.panN2.Location = new System.Drawing.Point(187, 67);
-            this.panN2.Name = "panN2";
-            this.panN2.Size = new System.Drawing.Size(189, 30);
-            this.panN2.TabIndex = 29;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(131)))), ((int)(((byte)(139)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 27);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(189, 3);
-            this.panel9.TabIndex = 0;
             // 
             // panN1
             // 
@@ -625,15 +542,9 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.txtAM);
-            this.panel6.Controls.Add(this.txtAP);
             this.panel6.Controls.Add(this.txtNombre);
             this.panel6.Controls.Add(this.btnBuscarN);
             this.panel6.Controls.Add(this.panN1);
-            this.panel6.Controls.Add(this.panN2);
-            this.panel6.Controls.Add(this.panN3);
-            this.panel6.Controls.Add(this.lblAM);
-            this.panel6.Controls.Add(this.lblAP);
             this.panel6.Controls.Add(this.lblNombre);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(182, 100);
@@ -655,6 +566,15 @@
             this.panel8.TabIndex = 34;
             this.panel8.Visible = false;
             this.panel8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBuscar_MouseClick);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 15F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(178, 12);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(344, 30);
+            this.dateTimePicker1.TabIndex = 32;
             // 
             // button6
             // 
@@ -700,15 +620,6 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Fecha de venta";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 15F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(178, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(344, 30);
-            this.dateTimePicker1.TabIndex = 32;
-            // 
             // panel12
             // 
             this.panel12.Controls.Add(this.button11);
@@ -747,6 +658,17 @@
             this.panel14.Size = new System.Drawing.Size(224, 30);
             this.panel14.TabIndex = 28;
             // 
+            // txtNumero
+            // 
+            this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNumero.Font = new System.Drawing.Font("Arial", 15F);
+            this.txtNumero.Location = new System.Drawing.Point(0, 0);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(224, 23);
+            this.txtNumero.TabIndex = 32;
+            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
+            // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(131)))), ((int)(((byte)(139)))));
@@ -765,17 +687,6 @@
             this.label4.Size = new System.Drawing.Size(182, 23);
             this.label4.TabIndex = 22;
             this.label4.Text = "Numero de telefono";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNumero.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtNumero.Location = new System.Drawing.Point(0, 0);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(224, 23);
-            this.txtNumero.TabIndex = 32;
-            this.txtNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // panel16
             // 
@@ -839,9 +750,9 @@
             this.label5.Font = new System.Drawing.Font("Arial", 15F);
             this.label5.Location = new System.Drawing.Point(27, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 23);
+            this.label5.Size = new System.Drawing.Size(88, 23);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Direccion";
+            this.label5.Text = "Domicilio";
             // 
             // panel19
             // 
@@ -960,6 +871,29 @@
             this.panel20.Size = new System.Drawing.Size(168, 155);
             this.panel20.TabIndex = 9;
             this.panel20.Visible = false;
+            // 
+            // button17
+            // 
+            this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button17.BackColor = System.Drawing.Color.Transparent;
+            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(142)))), ((int)(((byte)(228)))));
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button17.Location = new System.Drawing.Point(-3, 90);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(171, 64);
+            this.button17.TabIndex = 8;
+            this.button17.Text = "Por Marca Electrodomestico";
+            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -1302,29 +1236,6 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Marca de electrodomestico";
             // 
-            // button17
-            // 
-            this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button17.BackColor = System.Drawing.Color.Transparent;
-            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(142)))), ((int)(((byte)(228)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.Location = new System.Drawing.Point(-3, 90);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(171, 64);
-            this.button17.TabIndex = 8;
-            this.button17.Text = "Por Marca Electrodomestico";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
             // frmBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1332,19 +1243,19 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.ControlBox = false;
-            this.Controls.Add(this.panel23);
             this.Controls.Add(this.panel22);
             this.Controls.Add(this.panel21);
             this.Controls.Add(this.panel20);
             this.Controls.Add(this.panel19);
-            this.Controls.Add(this.panel16);
-            this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.gridBuscar);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel23);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel12);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1364,8 +1275,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridBuscar)).EndInit();
-            this.panN3.ResumeLayout(false);
-            this.panN2.ResumeLayout(false);
             this.panN1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1414,16 +1323,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView gridBuscar;
-        private System.Windows.Forms.TextBox txtAM;
-        private System.Windows.Forms.TextBox txtAP;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblAP;
-        private System.Windows.Forms.Label lblAM;
-        private System.Windows.Forms.Panel panN3;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panN2;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panN1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnBuscarN;
