@@ -50,6 +50,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.panel32 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -122,6 +123,9 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(885, 37);
             this.panel4.TabIndex = 0;
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
+            this.panel4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseUp);
             // 
             // panel1
             // 
@@ -187,6 +191,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(142)))), ((int)(((byte)(228)))));
+            this.panel3.Controls.Add(this.panel32);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -393,6 +398,17 @@
             this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
+            // panel32
+            // 
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel32.Location = new System.Drawing.Point(0, 0);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(182, 37);
+            this.panel32.TabIndex = 4;
+            this.panel32.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
+            this.panel32.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
+            this.panel32.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
+            // 
             // frmBorrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,5 +461,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel32;
     }
 }

@@ -15,7 +15,7 @@ namespace RoyLavadoras
 {
     public partial class frmInsertar : Form
     {
-        private int id = 0;
+        private int id = 0, m, mx, my;
         Connection cn;
         public frmInsertar()
         {
@@ -201,6 +201,50 @@ namespace RoyLavadoras
             frmBuscar buscar = new frmBuscar("Domicilio");
             this.Hide();
             buscar.Show();
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                SetDesktopLocation(MousePosition.X - mx - 182, MousePosition.Y - my);
+            }
+        }
+
+        private void panel4_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+            mx = 0;
+            my = 0;
+        }
+
+        private void panel32_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel32_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel32_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+            mx = 0;
+            my = 0;
         }
 
         private void button10_Click(object sender, EventArgs e)

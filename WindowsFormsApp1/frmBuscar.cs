@@ -15,6 +15,7 @@ namespace RoyLavadoras
     public partial class frmBuscar : Form
     {
         private string buscar="";
+        private int m, mx, my;
         private String search;
         Connection cn;
         public frmBuscar(String search)
@@ -527,6 +528,50 @@ namespace RoyLavadoras
         private void button17_Click(object sender, EventArgs e)
         {
             porElectro();
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                SetDesktopLocation(MousePosition.X - mx - 182, MousePosition.Y - my);
+            }
+        }
+
+        private void panel4_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+            mx = 0;
+            my = 0;
+        }
+
+        private void panel32_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel32_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel32_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+            mx = 0;
+            my = 0;
         }
 
         private void button13_Click(object sender, EventArgs e)
