@@ -151,7 +151,7 @@ namespace RoyLavadoras
             getId();
         }
         private void getId() {
-            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=root;database=roy_lavadoras");
+            MySqlConnection conn = new MySqlConnection(@"server=localhost;user id=angel;database=roy_lavadoras");
             string sql = @"select max(idCliente) as idCliente from clientes";
             try
             {
