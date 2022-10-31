@@ -13,6 +13,7 @@ namespace RoyLavadoras
 {
     public partial class frmMenu : Form
     {
+        int m, mx, my;
         
         public frmMenu()
         {
@@ -115,5 +116,52 @@ namespace RoyLavadoras
             this.Hide();
             buscar.Show();
         }
+
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void panel4_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                SetDesktopLocation(MousePosition.X - mx-182, MousePosition.Y - my);
+            }
+        }
+
+        private void panel4_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+            mx = 0;
+            my = 0;
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel3_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+            mx = 0;
+            my = 0;
+        }
+
+        
     }
 }
