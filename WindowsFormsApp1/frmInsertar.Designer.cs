@@ -490,7 +490,7 @@ namespace RoyLavadoras
             this.label4.Size = new System.Drawing.Size(79, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Nombre";
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
+            //this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // label5
             // 
@@ -501,7 +501,7 @@ namespace RoyLavadoras
             this.label5.Size = new System.Drawing.Size(154, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "Apellido Paterno";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+           // this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -512,7 +512,7 @@ namespace RoyLavadoras
             this.label6.Size = new System.Drawing.Size(158, 23);
             this.label6.TabIndex = 9;
             this.label6.Text = "Apellido Materno";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            //this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -554,7 +554,7 @@ namespace RoyLavadoras
             this.txtNombre.Size = new System.Drawing.Size(189, 23);
             this.txtNombre.TabIndex = 13;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+           // this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtAP
             // 
@@ -565,7 +565,7 @@ namespace RoyLavadoras
             this.txtAP.Size = new System.Drawing.Size(189, 23);
             this.txtAP.TabIndex = 14;
             this.txtAP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAP.TextChanged += new System.EventHandler(this.txtAP_TextChanged);
+           // this.txtAP.TextChanged += new System.EventHandler(this.txtAP_TextChanged);
             // 
             // txtAM
             // 
@@ -576,7 +576,7 @@ namespace RoyLavadoras
             this.txtAM.Size = new System.Drawing.Size(189, 23);
             this.txtAM.TabIndex = 15;
             this.txtAM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAM.TextChanged += new System.EventHandler(this.txtAM_TextChanged);
+          //  this.txtAM.TextChanged += new System.EventHandler(this.txtAM_TextChanged);
             // 
             // txtCiudad
             // 
@@ -616,7 +616,7 @@ namespace RoyLavadoras
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(189, 30);
             this.panel8.TabIndex = 20;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
+           // this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // panel9
             // 
@@ -651,7 +651,7 @@ namespace RoyLavadoras
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(189, 30);
             this.panel12.TabIndex = 21;
-            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
+          //  this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
             // panel13
             // 
@@ -712,7 +712,7 @@ namespace RoyLavadoras
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(189, 30);
             this.panel6.TabIndex = 19;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+          //  this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // txtElectro
             // 
