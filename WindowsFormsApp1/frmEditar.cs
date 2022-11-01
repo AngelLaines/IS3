@@ -370,6 +370,9 @@ namespace RoyLavadoras
             {
                 conn.Close();
             }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
         }
 
         private void btnBuscarN_Click(object sender, EventArgs e)
@@ -402,6 +405,9 @@ namespace RoyLavadoras
             {
                 conn.Close();
             }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
         }
 
         private void button29_Click(object sender, EventArgs e)
@@ -434,6 +440,9 @@ namespace RoyLavadoras
             {
                 conn.Close();
             }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -466,6 +475,9 @@ namespace RoyLavadoras
             {
                 conn.Close();
             }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -503,16 +515,66 @@ namespace RoyLavadoras
             {
                 conn.Close();
             }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-           /* foreach (DataGridViewRow row in dtaPagos.Rows)
-            {
-                MessageBox.Show(row.Cells["Pago"].Value.ToString());
-                MessageBox.Show(row.Cells["Cantidad"].Value.ToString());
-                MessageBox.Show(row.Cells["Observaciones"].Value.ToString());
-            }*/
+            /* foreach (DataGridViewRow row in dtaPagos.Rows)
+             {
+                 MessageBox.Show(row.Cells["Pago"].Value.ToString());
+                 MessageBox.Show(row.Cells["Cantidad"].Value.ToString());
+                 MessageBox.Show(row.Cells["Observaciones"].Value.ToString());
+             }*/
+            DialogResult dialog = MessageBox.Show("Usted esta a punto de editar los datos de las ventas, esta accion es irreversible.\n\n¿Desea editar los datos de la venta? \n\n (Si no esta seguro, asegurese de que los datos a editar sean correctos)","Advertencia",MessageBoxButtons.YesNo) ;
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            int idcliente, precio;
+            string nombre, apellidoP, apellidoM, nombreE, marca, ciudad, direccion, numero, garantia, atendio, fecha;
+            string sqlCliente;
+            string sqlDireccion;
+            string sqlElectro;
+            string sqlVenta;
+            if (dialog == DialogResult.Yes) { 
+                foreach(DataGridViewRow row in gridBuscar.Rows) {
+                    try {
+                        idcliente = int.Parse(row.Cells["Id Cliente"].Value.ToString());
+                        nombre = row.Cells["Nombre"].Value.ToString();
+                        apellidoP = row.Cells["Apellido Paterno"].Value.ToString();
+                        apellidoM = row.Cells["Apellido Materno"].Value.ToString();
+                        nombreE = row.Cells["Nombre Electrodomestico"].Value.ToString();
+                        marca = row.Cells["Marca"].Value.ToString();
+                        precio = int.Parse(row.Cells["Precio"].Value.ToString());
+                        ciudad = row.Cells["Ciudad"].Value.ToString();
+                        direccion = row.Cells["Direccion"].Value.ToString();
+                        numero = row.Cells["Numero"].Value.ToString();
+                        garantia = row.Cells["Garantia"].Value.ToString();
+                        atendio = row.Cells["Atendio"].Value.ToString();
+                        //fecha = row.Cells["Fecha de venta"].Value.ToString();
+
+                        sqlCliente = @"update clientes set nombre='"+nombre+"', apellidoP='"+apellidoP+"', apellidoM='"+apellidoM+"' where idcliente="+idcliente;
+                        sqlDireccion = @"update direccion set ciudad='"+ciudad+"', direccion='"+direccion+"', numero="+numero+" where idDireccion="+idcliente;
+                        sqlElectro = @"update electrodomesticos set nombre='"+nombreE+"', marca='"+marca+"' where idElectrodomestico="+idcliente;
+                        sqlVenta = @"update ventas set precio="+precio+", garantia='"+garantia+"', atiende='"+atendio+"' where idVenta="+idcliente;
+
+                        //MessageBox.Show(sqlCliente+"\n"+ sqlDireccion + "\n"+sqlElectro + "\n"+ sqlVenta + "\n");
+                        conn.Open();
+                        MySqlCommand cmd = new MySqlCommand(sqlCliente,conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sqlDireccion,conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sqlElectro,conn);
+                        cmd.ExecuteNonQuery();
+                        cmd = new MySqlCommand(sqlVenta,conn);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Datos de la venta editados correctamente!","Aviso");
+
+                    } catch (MySqlException ex) { MessageBox.Show(ex.ToString()); } finally { conn.Close(); }
+                    //MessageBox.Show(row.Cells["Nombre"].Value.ToString());
+                }
+            }
 
         }
 

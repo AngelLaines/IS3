@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -92,7 +93,6 @@
             this.panN1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.panel32 = new System.Windows.Forms.Panel();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -345,6 +345,17 @@
             this.panel3.Size = new System.Drawing.Size(182, 100);
             this.panel3.TabIndex = 6;
             this.panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmEditar_MouseClick);
+            // 
+            // panel32
+            // 
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel32.Location = new System.Drawing.Point(0, 0);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(182, 37);
+            this.panel32.TabIndex = 5;
+            this.panel32.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
+            this.panel32.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
+            this.panel32.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
             // 
             // panel1
             // 
@@ -808,8 +819,8 @@
             this.gridBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridBuscar.GridColor = System.Drawing.SystemColors.Control;
             this.gridBuscar.Location = new System.Drawing.Point(182, 161);
+            this.gridBuscar.MultiSelect = false;
             this.gridBuscar.Name = "gridBuscar";
-            this.gridBuscar.ReadOnly = true;
             this.gridBuscar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.gridBuscar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.gridBuscar.Size = new System.Drawing.Size(885, 393);
@@ -965,17 +976,6 @@
             this.lblNombre.Size = new System.Drawing.Size(79, 23);
             this.lblNombre.TabIndex = 22;
             this.lblNombre.Text = "Nombre";
-            // 
-            // panel32
-            // 
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel32.Location = new System.Drawing.Point(0, 0);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(182, 37);
-            this.panel32.TabIndex = 5;
-            this.panel32.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
-            this.panel32.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
-            this.panel32.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
             // 
             // frmEditar
             // 
