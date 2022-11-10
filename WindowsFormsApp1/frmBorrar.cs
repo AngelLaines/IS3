@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace RoyLavadoras
 {
     public partial class frmBorrar : Form
     {
         private int m, mx, my;
+        Connection cn = new Connection();
 
         public frmBorrar()
         {
@@ -69,7 +72,10 @@ namespace RoyLavadoras
 
         private void frmBorrar_Load(object sender, EventArgs e)
         {
-
+            comboBox5.SelectedText = "Nombre";
+            Font fuente = new Font("Arial", 15, GraphicsUnit.Pixel);
+            gridBuscar.DefaultCellStyle.Font = fuente;
+            gridBuscar.ColumnHeadersDefaultCellStyle.Font = fuente;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -134,6 +140,476 @@ namespace RoyLavadoras
             m = 0;
             mx = 0;
             my = 0;
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string txt = comboBox5.SelectedItem.ToString();
+            switch (txt)
+            {
+                case "Fecha":
+                    panel11.Visible = true;
+                    panel8.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox4.ResetText();
+                    comboBox4.SelectedText = "Fecha";
+                    break;
+                case "Numero":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = true;
+                    panel16.Visible = false;
+                    comboBox3.ResetText();
+                    comboBox3.SelectedText = "Numero";
+                    break;
+                case "Domicilio":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = true;
+                    comboBox2.ResetText();
+                    comboBox2.SelectedText = "Domicilio";
+                    break;
+                case "Marca electrodomestico":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = true;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox1.ResetText();
+                    comboBox1.SelectedText = "Marca electrodomestico";
+                    break;
+            }
+
+            gridBuscar.DataSource = null;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string txt = comboBox1.SelectedItem.ToString();
+            switch (txt)
+            {
+                case "Fecha":
+                    panel8.Visible = false;
+                    panel11.Visible = true;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox4.ResetText();
+                    comboBox4.SelectedText = "Fecha";
+                    break;
+                case "Numero":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = true;
+                    panel16.Visible = false;
+                    comboBox3.ResetText();
+                    comboBox3.SelectedText = "Numero";
+                    break;
+                case "Domicilio":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = true;
+                    comboBox2.ResetText();
+                    comboBox2.SelectedText = "Domicilio";
+                    break;
+                case "Nombre":
+                    panel8.Visible = true;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox5.ResetText();
+                    comboBox5.SelectedText = "Nombre";
+                    break;
+            }
+            gridBuscar.DataSource = null;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string txt = comboBox2.SelectedItem.ToString();
+            switch (txt)
+            {
+                case "Fecha":
+                    panel8.Visible = false;
+                    panel11.Visible = true;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox4.ResetText();
+                    comboBox4.SelectedText = "Fecha";
+                    break;
+                case "Numero":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = true;
+                    panel16.Visible = false;
+                    comboBox3.ResetText();
+                    comboBox3.SelectedText = "Numero";
+                    break;
+                case "Nombre":
+                    panel8.Visible = true;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox5.ResetText();
+                    comboBox5.SelectedText = "Nombre";
+                    break;
+                case "Marca electrodomestico":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = true;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox1.ResetText();
+                    comboBox1.SelectedText = "Marca electrodomestico";
+                    break;
+            }
+            gridBuscar.DataSource = null;
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string txt = comboBox3.SelectedItem.ToString();
+            switch (txt)
+            {
+                case "Fecha":
+                    panel8.Visible = false;
+                    panel11.Visible = true;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox4.ResetText();
+                    comboBox4.SelectedText = "Fecha";
+                    break;
+                case "Nombre":
+                    panel8.Visible = true;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox5.ResetText();
+                    comboBox5.SelectedText = "Nombre";
+                    break;
+                case "Domicilio":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = true;
+                    comboBox2.ResetText();
+                    comboBox2.SelectedText = "Domicilio";
+                    break;
+                case "Marca electrodomestico":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = true;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox1.ResetText();
+                    comboBox1.SelectedText = "Marca electrodomestico";
+                    break;
+            }
+            gridBuscar.DataSource = null;
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string txt = comboBox4.SelectedItem.ToString();
+            switch (txt)
+            {
+                case "Nombre":
+                    panel8.Visible = true;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox5.ResetText();
+                    comboBox5.SelectedText = "Nombre";
+                    break;
+                case "Numero":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = true;
+                    panel16.Visible = false;
+                    comboBox3.ResetText();
+                    comboBox3.SelectedText = "Numero";
+                    break;
+                case "Domicilio":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = true;
+                    comboBox2.ResetText();
+                    comboBox2.SelectedText = "Domicilio";
+                    break;
+                case "Marca electrodomestico":
+                    panel8.Visible = false;
+                    panel11.Visible = false;
+                    panel23.Visible = true;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    comboBox1.ResetText();
+                    comboBox1.SelectedText = "Marca electrodomestico";
+                    break;
+            }
+            gridBuscar.DataSource = null;
+        }
+
+        private void btnBuscarN_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where c.nombre='" + txtNombre.Text + "'";
+            try
+            {
+
+                conn.Open();
+
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+                dataAdapter.SelectCommand = new MySqlCommand(sql, conn);
+                DataTable table = new DataTable();
+
+                dataAdapter.Fill(table);
+
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = table;
+
+                gridBuscar.DataSource = bSource;
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + txtMarca.Text + "'";
+            try
+            {
+
+                conn.Open();
+
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+                dataAdapter.SelectCommand = new MySqlCommand(sql, conn);
+                DataTable table = new DataTable();
+
+                dataAdapter.Fill(table);
+
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = table;
+
+                gridBuscar.DataSource = bSource;
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente', c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where d.direccion='" + txtDireccion.Text + "'";
+            try
+            {
+
+                conn.Open();
+
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+                dataAdapter.SelectCommand = new MySqlCommand(sql, conn);
+                DataTable table = new DataTable();
+
+                dataAdapter.Fill(table);
+
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = table;
+
+                gridBuscar.DataSource = bSource;
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string numero = txtNumero.Text;
+            if (numero == "")
+            {
+                numero = "0";
+            }
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where d.numero=" + numero;
+            try
+            {
+
+                conn.Open();
+
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+                dataAdapter.SelectCommand = new MySqlCommand(sql, conn);
+                DataTable table = new DataTable();
+
+                dataAdapter.Fill(table);
+
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = table;
+
+                gridBuscar.DataSource = bSource;
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string fecha = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where v.fecha='" + fecha + "'";
+            try
+            {
+
+                conn.Open();
+
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter();
+                dataAdapter.SelectCommand = new MySqlCommand(sql, conn);
+                DataTable table = new DataTable();
+
+                dataAdapter.Fill(table);
+
+                BindingSource bSource = new BindingSource();
+                bSource.DataSource = table;
+
+                gridBuscar.DataSource = bSource;
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            gridBuscar.Columns[0].ReadOnly = true;
+            gridBuscar.Columns[12].ReadOnly = true;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (gridBuscar.DataSource == null || gridBuscar.Rows.Count.ToString()=="0")
+            {
+            }
+            else
+            {
+
+                DialogResult dialog = MessageBox.Show("Usted esta a punto de borrar los datos de las ventas, esta accion es irreversible.\n\n¿Desea borrar los datos de la venta? \n\n (Si no esta seguro, asegurese de que los datos a borrar sean los correctos)", "Advertencia", MessageBoxButtons.YesNo);
+                MySqlConnection conn = new MySqlConnection(cn.conn());
+                int idcliente;
+                
+                string sqlCD;
+                string sqlCV;
+                string sqlCE;
+                string sqlCliente;
+                string sqlDireccion;
+                string sqlElectro;
+                string sqlVenta;
+                if (dialog == DialogResult.Yes)
+                {
+                    
+                        try
+                        {
+                        DataGridViewRow row = gridBuscar.CurrentRow;
+                            idcliente = int.Parse(row.Cells["Id Cliente"].Value.ToString());
+
+                            sqlCD = @"delete from clientes_direccion where idcliente=" + idcliente.ToString();
+                            sqlCV = @"delete from clientes_ventas where idcliente="+idcliente.ToString();
+                            sqlCE = @"delete from clientes_electrodomesticos where idcliente=" + idcliente.ToString();
+                            sqlCliente = @"delete from clientes where idcliente=" + idcliente.ToString();
+                            sqlDireccion = @"delete from direccion where iddireccion=" + idcliente.ToString();
+                            sqlElectro = @"delete from electrodomesticos where idElectrodomestico=" + idcliente.ToString();
+                            sqlVenta = @"delete from ventas where idventa=" + idcliente.ToString();
+
+                            //MessageBox.Show(sqlCliente+"\n"+ sqlDireccion + "\n"+sqlElectro + "\n"+ sqlVenta + "\n");
+                            conn.Open();
+                            MySqlCommand cmd = new MySqlCommand(sqlCV, conn);
+                            cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(sqlCE,conn);
+                            cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(sqlCD, conn);
+                            cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(sqlCliente, conn);
+                            cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(sqlDireccion, conn);
+                            cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(sqlElectro, conn);
+                            cmd.ExecuteNonQuery();
+                            cmd = new MySqlCommand(sqlVenta, conn);
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Datos de la venta borrados correctamente!", "Aviso");
+
+                            gridBuscar.Rows.Remove(gridBuscar.CurrentRow);
+                        }
+                        catch (MySqlException ex) { MessageBox.Show(ex.ToString()); }
+                        finally { conn.Close(); }
+                    
+                }
+            }
         }
 
         private void panel4_MouseMove(object sender, MouseEventArgs e)

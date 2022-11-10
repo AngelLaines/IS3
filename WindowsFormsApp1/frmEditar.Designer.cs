@@ -988,11 +988,11 @@
             this.Controls.Add(this.gridBuscar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel23);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel12);
-            this.Controls.Add(this.panel8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEditar";

@@ -528,6 +528,11 @@ namespace RoyLavadoras
                  MessageBox.Show(row.Cells["Cantidad"].Value.ToString());
                  MessageBox.Show(row.Cells["Observaciones"].Value.ToString());
              }*/
+            if (gridBuscar.DataSource == null || gridBuscar.Rows.Count.ToString() == "0")
+            {
+            }
+            else { 
+            
             DialogResult dialog = MessageBox.Show("Usted esta a punto de editar los datos de las ventas, esta accion es irreversible.\n\n¿Desea editar los datos de la venta? \n\n (Si no esta seguro, asegurese de que los datos a editar sean correctos)","Advertencia",MessageBoxButtons.YesNo) ;
             MySqlConnection conn = new MySqlConnection(cn.conn());
             int idcliente, precio;
@@ -574,6 +579,7 @@ namespace RoyLavadoras
                     } catch (MySqlException ex) { MessageBox.Show(ex.ToString()); } finally { conn.Close(); }
                     //MessageBox.Show(row.Cells["Nombre"].Value.ToString());
                 }
+            }
             }
 
         }
