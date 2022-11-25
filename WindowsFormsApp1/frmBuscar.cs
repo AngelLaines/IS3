@@ -142,6 +142,25 @@ namespace RoyLavadoras
                     gridBuscar.Height = 393;
                     break;
             }
+
+
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select distinct marca from electrodomesticos";
+            try {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(sql,conn);
+                MySqlDataReader data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    cmbMarca.Items.Add(data["marca"].ToString());
+                }
+            }
+            catch (MySqlException ex) {
+                MessageBox.Show(ex.ToString());
+            }
+            finally{
+                conn.Close();
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -347,6 +366,7 @@ namespace RoyLavadoras
             panel21.Visible = false;
             panel22.Visible = false;
 
+            cmbMarca.ResetText();
             panel6.Visible = true;
             panel16.Visible = false;
             panel23.Visible = false;
@@ -364,6 +384,7 @@ namespace RoyLavadoras
             panel21.Visible = false;
             panel22.Visible = false;
 
+            cmbMarca.ResetText();
             panel6.Visible = false;
             panel16.Visible = false;
             panel12.Visible = false;
@@ -381,6 +402,7 @@ namespace RoyLavadoras
             panel21.Visible = false;
             panel22.Visible = false;
 
+            cmbMarca.ResetText();
             panel6.Visible = false;
             panel16.Visible = false;
             panel12.Visible = true;
@@ -398,6 +420,7 @@ namespace RoyLavadoras
             panel21.Visible = false;
             panel22.Visible = false;
 
+            cmbMarca.ResetText();
             panel6.Visible = false;
             panel16.Visible = true;
             panel12.Visible = false;
@@ -414,6 +437,7 @@ namespace RoyLavadoras
             panel21.Visible = false;
             panel22.Visible = false;
 
+            cmbMarca.ResetText();
             panel6.Visible = false;
             panel16.Visible = false;
             panel12.Visible = false;
@@ -486,7 +510,7 @@ namespace RoyLavadoras
         private void button29_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(cn.conn());
-            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + txtMarca.Text + "'";
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + cmbMarca.SelectedItem.ToString() + "'";
             try
             {
 

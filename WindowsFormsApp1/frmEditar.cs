@@ -71,11 +71,33 @@ namespace RoyLavadoras
 
         private void frmEditar_Load(object sender, EventArgs e)
         {
-            comboBox5.SelectedText = "Nombre";
+            comboBox6.SelectedText = "Nombre";
             Font fuente = new Font("Arial", 15, GraphicsUnit.Pixel);
             gridBuscar.DefaultCellStyle.Font = fuente;
             gridBuscar.ColumnHeadersDefaultCellStyle.Font = fuente;
-            
+
+
+            MySqlConnection conn = new MySqlConnection(cn.conn());
+            string sql = @"select distinct marca from electrodomesticos";
+            try
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader data = cmd.ExecuteReader();
+                while (data.Read())
+                {
+                    cmbMarca.Items.Add(data["marca"].ToString());
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -111,232 +133,6 @@ namespace RoyLavadoras
             frmBuscar buscar = new frmBuscar("Electro");
             this.Hide();
             buscar.Show();
-        }
-
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string txt = comboBox5.SelectedItem.ToString();
-            switch (txt) {
-                case "Fecha":
-                    panel8.Visible = true;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox4.ResetText();
-                    comboBox4.SelectedText = "Fecha";
-                    break;
-                case "Numero":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = true;
-                    panel16.Visible = false;
-                    comboBox3.ResetText();
-                    comboBox3.SelectedText = "Numero";
-                    break;
-                case "Domicilio":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = true;
-                    comboBox2.ResetText();
-                    comboBox2.SelectedText = "Domicilio";
-                    break;
-                case "Marca electrodomestico":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = true;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox1.ResetText();
-                    comboBox1.SelectedText = "Marca electrodomestico";
-                    break;
-            }
-
-            gridBuscar.DataSource = null;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string txt = comboBox1.SelectedItem.ToString();
-            switch (txt)
-            {
-                case "Fecha":
-                    panel8.Visible = true;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox4.ResetText();
-                    comboBox4.SelectedText = "Fecha";
-                    break;
-                case "Numero":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = true;
-                    panel16.Visible = false;
-                    comboBox3.ResetText();
-                    comboBox3.SelectedText = "Numero";
-                    break;
-                case "Domicilio":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = true;
-                    comboBox2.ResetText();
-                    comboBox2.SelectedText = "Domicilio";
-                    break;
-                case "Nombre":
-                    panel8.Visible = false;
-                    panel6.Visible = true;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox5.ResetText();
-                    comboBox5.SelectedText = "Nombre";
-                    break;
-            }
-            gridBuscar.DataSource = null;
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string txt = comboBox2.SelectedItem.ToString();
-            switch (txt)
-            {
-                case "Fecha":
-                    panel8.Visible = true;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox4.ResetText();
-                    comboBox4.SelectedText = "Fecha";
-                    break;
-                case "Numero":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = true;
-                    panel16.Visible = false;
-                    comboBox3.ResetText();
-                    comboBox3.SelectedText = "Numero";
-                    break;
-                case "Nombre":
-                    panel8.Visible = false;
-                    panel6.Visible = true;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox5.ResetText();
-                    comboBox5.SelectedText = "Nombre";
-                    break;
-                case "Marca electrodomestico":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = true;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox1.ResetText();
-                    comboBox1.SelectedText = "Marca electrodomestico";
-                    break;
-            }
-            gridBuscar.DataSource = null;
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string txt = comboBox3.SelectedItem.ToString();
-            switch (txt)
-            {
-                case "Fecha":
-                    panel8.Visible = true;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox4.ResetText();
-                    comboBox4.SelectedText = "Fecha";
-                    break;
-                case "Nombre":
-                    panel8.Visible = false;
-                    panel6.Visible = true;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox5.ResetText();
-                    comboBox5.SelectedText = "Nombre";
-                    break;
-                case "Domicilio":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = true;
-                    comboBox2.ResetText();
-                    comboBox2.SelectedText = "Domicilio";
-                    break;
-                case "Marca electrodomestico":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = true;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox1.ResetText();
-                    comboBox1.SelectedText = "Marca electrodomestico";
-                    break;
-            }
-            gridBuscar.DataSource = null;
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string txt = comboBox4.SelectedItem.ToString();
-            switch (txt)
-            {
-                case "Nombre":
-                    panel8.Visible = false;
-                    panel6.Visible = true;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox5.ResetText();
-                    comboBox5.SelectedText = "Nombre";
-                    break;
-                case "Numero":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = true;
-                    panel16.Visible = false;
-                    comboBox3.ResetText();
-                    comboBox3.SelectedText = "Numero";
-                    break;
-                case "Domicilio":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = false;
-                    panel12.Visible = false;
-                    panel16.Visible = true;
-                    comboBox2.ResetText();
-                    comboBox2.SelectedText = "Domicilio";
-                    break;
-                case "Marca electrodomestico":
-                    panel8.Visible = false;
-                    panel6.Visible = false;
-                    panel23.Visible = true;
-                    panel12.Visible = false;
-                    panel16.Visible = false;
-                    comboBox1.ResetText();
-                    comboBox1.SelectedText = "Marca electrodomestico";
-                    break;
-            }
-            gridBuscar.DataSource = null;
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -413,7 +209,7 @@ namespace RoyLavadoras
         private void button29_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(cn.conn());
-            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + txtMarca.Text + "'";
+            string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + cmbMarca.SelectedItem.ToString() + "'";
             try
             {
 
@@ -611,6 +407,52 @@ namespace RoyLavadoras
             m = 0;
             mx = 0;
             my = 0;
+        }
+
+        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmbMarca.ResetText();
+            string txt = comboBox6.SelectedItem.ToString();
+            switch (txt)
+            {
+                case "Nombre":
+                    panel8.Visible = false;
+                    panel6.Visible = true;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    break;
+                case "Fecha":
+                    panel8.Visible = true;
+                    panel6.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    break;
+                case "Numero":
+                    panel8.Visible = false;
+                    panel6.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = true;
+                    panel16.Visible = false;
+                    break;
+                case "Domicilio":
+                    panel8.Visible = false;
+                    panel6.Visible = false;
+                    panel23.Visible = false;
+                    panel12.Visible = false;
+                    panel16.Visible = true;
+                    break;
+                case "Marca electrodomestico":
+                    panel8.Visible = false;
+                    panel6.Visible = false;
+                    panel23.Visible = true;
+                    panel12.Visible = false;
+                    panel16.Visible = false;
+                    break;
+            }
+
+            gridBuscar.DataSource = null;
         }
 
         private void panel4_MouseMove(object sender, MouseEventArgs e)

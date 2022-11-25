@@ -92,7 +92,8 @@ namespace RoyLavadoras
                 txtMarca.Text == "" ||
                 txtElectro.Text == "" ||
                 txtGarantia.Text == "" ||
-                txtImporte.Text == "") {
+                txtImporte.Text == "" ||
+                txtAtiende.Text=="") {
                 MessageBox.Show("Faltan datos por escribir!","Advertencia",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             } else
             {
@@ -140,6 +141,19 @@ namespace RoyLavadoras
                         MessageBox.Show("Venta registrada con exito!", "Venta");
                         conn.Close();
                         getId();
+
+
+                        txtNombre.Text = "";
+                        txtAP.Text = "";
+                        txtAM.Text = "";
+                        txtCiudad.Text = "";
+                        txtDomicilio.Text = "";
+                        txtTelefono.Text = "";
+                        txtMarca.Text = "";
+                        txtElectro.Text = "";
+                        txtGarantia.Text = "";
+                        txtImporte.Text = "";
+                        txtAtiende.Text = "";
                     }
                     catch (MySqlException ex) { MessageBox.Show(ex.ToString()); }
                 }

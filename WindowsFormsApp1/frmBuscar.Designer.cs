@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -98,10 +99,9 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.button29 = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel32 = new System.Windows.Forms.Panel();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -418,6 +418,17 @@
             this.panel3.TabIndex = 6;
             this.panel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBuscar_MouseClick);
             // 
+            // panel32
+            // 
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel32.Location = new System.Drawing.Point(0, 0);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(182, 37);
+            this.panel32.TabIndex = 4;
+            this.panel32.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
+            this.panel32.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
+            this.panel32.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(131)))), ((int)(((byte)(139)))));
@@ -551,7 +562,6 @@
             this.panel6.Controls.Add(this.btnBuscarN);
             this.panel6.Controls.Add(this.panN1);
             this.panel6.Controls.Add(this.lblNombre);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(182, 100);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(885, 153);
@@ -1177,6 +1187,7 @@
             // 
             // panel23
             // 
+            this.panel23.Controls.Add(this.cmbMarca);
             this.panel23.Controls.Add(this.button29);
             this.panel23.Controls.Add(this.panel24);
             this.panel23.Controls.Add(this.label7);
@@ -1205,22 +1216,11 @@
             // 
             // panel24
             // 
-            this.panel24.Controls.Add(this.txtMarca);
             this.panel24.Controls.Add(this.panel25);
             this.panel24.Location = new System.Drawing.Point(282, 17);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(224, 30);
             this.panel24.TabIndex = 28;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMarca.Font = new System.Drawing.Font("Arial", 15F);
-            this.txtMarca.Location = new System.Drawing.Point(0, 0);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(224, 23);
-            this.txtMarca.TabIndex = 32;
-            this.txtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel25
             // 
@@ -1241,16 +1241,17 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Marca de electrodomestico";
             // 
-            // panel32
+            // cmbMarca
             // 
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel32.Location = new System.Drawing.Point(0, 0);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(182, 37);
-            this.panel32.TabIndex = 4;
-            this.panel32.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseDown);
-            this.panel32.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseMove);
-            this.panel32.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel32_MouseUp);
+            this.cmbMarca.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbMarca.Font = new System.Drawing.Font("Arial", 15F);
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(285, 12);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(217, 31);
+            this.cmbMarca.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.cmbMarca, "Opciones para editar");
             // 
             // frmBuscar
             // 
@@ -1265,13 +1266,13 @@
             this.Controls.Add(this.panel19);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.gridBuscar);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel23);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -1312,7 +1313,6 @@
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1386,10 +1386,10 @@
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.ComboBox cmbMarca;
     }
 }
