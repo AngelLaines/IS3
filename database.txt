@@ -1,14 +1,5 @@
-Fecha
-Nombre
-Apellido Paterno
-Apellido Materno
-Ciudad
-Domicilio
-Tipo de electrodomestico
-Marca
-Garantia
-Atendio
-Importe
+-- Abrir la solucion que se llama Roy Lavadoras
+
 
 create database roy_lavadoras;
 use roy_lavadoras;
@@ -63,4 +54,8 @@ create table if not exists clientes_ventas(
 );
 
 
-select c.idcliente,e.idelectrodomestico,v.idVenta,d.iddireccion from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca="LG"
+-------------------- Para la instancia en workbench --------------------
+-- server=localhost
+-- user id=root
+-- password=1234
+-- database=roy_lavadoras

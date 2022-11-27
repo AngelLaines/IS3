@@ -38,6 +38,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -101,7 +102,6 @@
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -264,6 +264,19 @@
             this.toolTip1.SetToolTip(this.pictureBox2, "Cerrar");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBuscar_MouseClick);
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbMarca.Font = new System.Drawing.Font("Arial", 15F);
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(285, 12);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(217, 31);
+            this.cmbMarca.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.cmbMarca, "Opciones para editar");
+            this.cmbMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBuscar_MouseClick);
             // 
             // label3
             // 
@@ -1240,18 +1253,6 @@
             this.label7.Size = new System.Drawing.Size(250, 23);
             this.label7.TabIndex = 22;
             this.label7.Text = "Marca de electrodomestico";
-            // 
-            // cmbMarca
-            // 
-            this.cmbMarca.BackColor = System.Drawing.SystemColors.Window;
-            this.cmbMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbMarca.Font = new System.Drawing.Font("Arial", 15F);
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(285, 12);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(217, 31);
-            this.cmbMarca.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.cmbMarca, "Opciones para editar");
             // 
             // frmBuscar
             // 

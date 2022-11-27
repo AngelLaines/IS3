@@ -33,6 +33,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -82,8 +84,6 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.cmbMarca = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -133,6 +133,40 @@
             this.toolTip1.SetToolTip(this.pictureBox2, "Cerrar");
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
+            // 
+            // cmbMarca
+            // 
+            this.cmbMarca.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbMarca.Font = new System.Drawing.Font("Arial", 15F);
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(285, 12);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(217, 31);
+            this.cmbMarca.TabIndex = 37;
+            this.toolTip1.SetToolTip(this.cmbMarca, "Opciones para editar");
+            this.cmbMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
+            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox6.Font = new System.Drawing.Font("Arial", 15F);
+            this.comboBox6.ForeColor = System.Drawing.Color.White;
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "Nombre",
+            "Fecha",
+            "Numero",
+            "Domicilio",
+            "Marca electrodomestico"});
+            this.comboBox6.Location = new System.Drawing.Point(0, 357);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(182, 31);
+            this.comboBox6.TabIndex = 34;
+            this.toolTip1.SetToolTip(this.comboBox6, "Opciones para editar");
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            this.comboBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
             // panel2
             // 
@@ -814,38 +848,6 @@
             this.label8.Size = new System.Drawing.Size(145, 23);
             this.label8.TabIndex = 22;
             this.label8.Text = "Fecha de venta";
-            // 
-            // cmbMarca
-            // 
-            this.cmbMarca.BackColor = System.Drawing.SystemColors.Window;
-            this.cmbMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbMarca.Font = new System.Drawing.Font("Arial", 15F);
-            this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(285, 12);
-            this.cmbMarca.Name = "cmbMarca";
-            this.cmbMarca.Size = new System.Drawing.Size(217, 31);
-            this.cmbMarca.TabIndex = 37;
-            this.toolTip1.SetToolTip(this.cmbMarca, "Opciones para editar");
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(81)))), ((int)(((byte)(152)))));
-            this.comboBox6.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox6.Font = new System.Drawing.Font("Arial", 15F);
-            this.comboBox6.ForeColor = System.Drawing.Color.White;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Nombre",
-            "Fecha",
-            "Numero",
-            "Domicilio",
-            "Marca electrodomestico"});
-            this.comboBox6.Location = new System.Drawing.Point(0, 357);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(182, 31);
-            this.comboBox6.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.comboBox6, "Opciones para editar");
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // frmBorrar
             // 
