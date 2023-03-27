@@ -144,7 +144,7 @@
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(217, 31);
             this.cmbMarca.TabIndex = 37;
-            this.toolTip1.SetToolTip(this.cmbMarca, "Opciones para editar");
+            this.toolTip1.SetToolTip(this.cmbMarca, "Marcas de electrodomesticos");
             this.cmbMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 
             // comboBox6
@@ -164,7 +164,7 @@
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(182, 31);
             this.comboBox6.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.comboBox6, "Opciones para editar");
+            this.toolTip1.SetToolTip(this.comboBox6, "Opciones para borrar");
             this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             this.comboBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBorrar_MouseClick);
             // 

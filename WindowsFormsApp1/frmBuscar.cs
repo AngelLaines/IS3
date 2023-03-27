@@ -509,6 +509,11 @@ namespace RoyLavadoras
 
         private void button29_Click(object sender, EventArgs e)
         {
+            if (cmbMarca.Items.Count==0) {
+
+            }
+            else {
+
             MySqlConnection conn = new MySqlConnection(cn.conn());
             string sql = @"select c.idcliente as 'Id Cliente',c.nombre as Nombre,c.apellidoP as 'Apellido Paterno',c.apellidoM as 'Apellido Materno',e.nombre as 'Nombre Electrodomestico',e.marca as Marca,d.ciudad as Ciudad,d.direccion as Direccion,d.numero as Numero,v.precio as Precio,v.garantia as Garantia,v.atiende as Atendio,date_format(v.fecha, '%d-%m-%Y') as 'Fecha de venta' from clientes c join clientes_electrodomesticos ce on c.idcliente=ce.idcliente join clientes_direccion cd on c.idcliente = cd.idcliente join clientes_ventas cv on c.idcliente=cv.idcliente join electrodomesticos e on ce.idelectrodomestico = e.idelectrodomestico join direccion d on d.iddireccion=cd.iddireccion join ventas v on v.idventa = cv.idventa where e.marca='" + cmbMarca.SelectedItem.ToString() + "'";
             try
@@ -536,6 +541,7 @@ namespace RoyLavadoras
             finally
             {
                 conn.Close();
+            }
             }
         }
 

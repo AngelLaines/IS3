@@ -275,7 +275,7 @@
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(217, 31);
             this.cmbMarca.TabIndex = 34;
-            this.toolTip1.SetToolTip(this.cmbMarca, "Opciones para editar");
+            this.toolTip1.SetToolTip(this.cmbMarca, "Marcas de electrodomesticos");
             this.cmbMarca.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmBuscar_MouseClick);
             // 
             // label3
